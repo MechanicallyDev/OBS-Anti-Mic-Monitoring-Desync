@@ -5,6 +5,11 @@ This OBS Script is a workaround on issues of audio monitoring desync that can ha
 If your OBS audio monitoring gets delayed over time, this script might mitigate the issue.
 
 
+## Requirements
+
+* OBS Version 30.1 or higher
+
+
 ## Installation
 
 You can either download the `AntiMicMonitoringDesync.py` file directly from github, or clone this project using the command `git clone https://github.com/MechanicallyDev/OBS-Anti-Mic-Monitoring-Desync.git`.
@@ -28,11 +33,16 @@ Contributions are always welcome!
 If you have any sugestion or issue, please leave an [issue](https://github.com/MechanicallyDev/OBS-Anti-Mic-Monitoring-Desync/issues).
 
 
+## Known issues
+
+In some cases the script may cause OBS crash on closing the app which shouldn't impact overall performance or stability.
+
+
 ## FAQ
 
 #### What does this script do?
 
-This script disables and immediately re-enables a choosen audio input device in a set interval (default: every minute).
+This script resets audio monitoring for a choosen audio input device in a set interval (default: every minute).
 
 This makes the buffer buildup disapear, forcing OBS to generate a more reasonable buffer, decreasing latency.
 
@@ -57,3 +67,8 @@ It is possible in some instances to notice the monitoring disabling and re-enabl
 #### Will my viewers be able to notice the effect of this script?
 
 No, this script only works on the monitoring side of OBS, the audio continues to be sent to your viewers even while your monitoring is off, so it doesn't affect the audio currenly being recorded or streamed.
+
+
+## Links
+
+* [OBS API Reference](https://docs.obsproject.com/reference-core)
